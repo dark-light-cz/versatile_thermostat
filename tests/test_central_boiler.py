@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 
 from unittest.mock import patch, MagicMock, PropertyMock
 
-from homeassistant.const import STATE_ON, STATE_OFF
+from homeassistant.const import STATE_ON, STATE_OFF, UnitOfPower
 from homeassistant.core import HomeAssistant
 
 from homeassistant.config_entries import ConfigEntryState
@@ -211,6 +211,7 @@ async def test_update_central_boiler_state_simple(
 
     total_power_active_sensor: TotalPowerActiveDeviceForBoilerSensor = search_entity(hass, "sensor.total_power_active_for_boiler", "sensor")
     assert total_power_active_sensor is not None
+    assert total_power_active_sensor.native_unit_of_measurement == UnitOfPower.WATT
     assert total_power_active_sensor.state == 0
     assert total_power_active_sensor.active_device_ids == []
 
@@ -441,6 +442,7 @@ async def test_update_central_boiler_state_multiple(
 
     total_power_active_sensor: TotalPowerActiveDeviceForBoilerSensor = search_entity(hass, "sensor.total_power_active_for_boiler", "sensor")
     assert total_power_active_sensor is not None
+    assert total_power_active_sensor.native_unit_of_measurement == UnitOfPower.WATT
     assert total_power_active_sensor.state == 0
     assert total_power_active_sensor.active_device_ids == []
 

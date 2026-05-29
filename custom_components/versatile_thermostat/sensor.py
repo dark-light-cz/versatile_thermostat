@@ -970,6 +970,14 @@ class TotalPowerActiveDeviceForBoilerSensor(NbActiveDeviceForBoilerSensor):
         return SensorDeviceClass.POWER
 
     @property
+    def native_unit_of_measurement(self) -> str | None:
+        """Return the unit of measurement.
+
+        Total active power is the sum of each VTherm mean_cycle_power (Watts).
+        """
+        return UnitOfPower.WATT
+
+    @property
     def suggested_display_precision(self) -> int | None:
         """Return the suggested number of decimal digits for display."""
         return 2
