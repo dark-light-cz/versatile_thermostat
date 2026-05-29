@@ -18,7 +18,7 @@ Instalace by měla vypadat takto:
 
 1. Uživatel nebo automatizace, nebo Scheduler, nastaví setpoint prostřednictvím preset nebo přímo pomocí teploty.
 2. Periodicky vnitřní teploměr (2) nebo vnější teploměr (2b) pošle naměřenou teplotu. Vnitřní teploměr by měl být umístěn na relevantním místě pro pohodlí uživatele: ideálně uprostřed obytného prostoru. Vyhněte se umístění příliš blízko okna nebo příliš blízko radiátoru.
-3. Na základě hodnot setpointu, různých teplot a parametrů algoritmu TPI (viz [TPI](algorithms.md#lalgorithme-tpi)), VTherm vypočítá procento času zapnutí.
+3. Na základě hodnot setpointu, různých teplot a parametrů algoritmu TPI (viz [TPI](algorithms.md#algoritmus-tpi)), VTherm vypočítá procento času zapnutí.
 4. Poté bude pravidelně ovládat zapínání a vypínání podkladových entit `switch` (nebo `select` nebo `climate`).
 5. Tyto podkladové entity budou ovládat fyzické zařízení.
 6. Fyzický spínač zapne nebo vypne radiátor.

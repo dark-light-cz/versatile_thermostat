@@ -10,7 +10,7 @@ Vyberte menu "Hlavní atributy".
 Zadejte povinné hlavní atributy. Tyto atributy jsou společné pro všechny VTherm:
 1. Název (to bude jak název integrace, tak název entity `climate`),
 2. ID entity teplotního senzoru, který poskytuje teplotu místnosti, kde je radiátor nainstalován,
-3. Volitelný senzor entity poskytující datum a čas posledního zobrazení senzoru (`last_seen`). Pokud je dostupný, zadejte jej zde. Pomáhá předcházet bezpečnostním vypnutím, když je teplota stabilní a senzor přestane hlásit po dlouhou dobu (viz [zde](troubleshooting.md#why-does-my-versatile-thermostat-go-into-safety-mode)),
+3. Volitelný senzor entity poskytující datum a čas posledního zobrazení senzoru (`last_seen`). Pokud je dostupný, zadejte jej zde. Pomáhá předcházet bezpečnostním vypnutím, když je teplota stabilní a senzor přestane hlásit po dlouhou dobu (viz [zde](troubleshooting.md#proč-můj-versatile-thermostat-přejde-do-režimu-bezpečnosti-)),
 4. Trvání cyklu v minutách. V každém cyklu:
    1. Pro `over_switch`: VTherm zapne/vypne radiátor, moduluje podíl času, kdy je zapnutý,
    2. Pro `over_valve`: VTherm vypočítá novou úroveň otevření ventilu a pošle ji, pokud se změnila,
